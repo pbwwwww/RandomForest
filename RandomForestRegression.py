@@ -219,7 +219,7 @@ if __name__ == '__main__':
                                  random_state=66)
     train_count = int(0.7 * len(df))
     feature_list = ["CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM", "AGE", "DIS", "RAD", 
-                    "TAX", "PTRATIO", "B", "LSTAT", "MEDV"]
+                    "TAX", "PTRATIO", "B", "LSTAT", "label"]
     clf.fit(df.loc[:train_count, feature_list], df.loc[:train_count, 'label'])
 
     from sklearn import metrics
